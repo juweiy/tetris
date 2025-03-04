@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.App {
+  display: grid;
+  grid-template-areas:
+    '. title .'
+    '. game controls';
+  grid-template-columns: repeat(3, 1fr);
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  grid-area: title;
+}
+
+.controls {
+  grid-area: controls;
+  font-size: small;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Press Start 2P', sans-serif;
+}
+
+button {
+  font-family: 'Press Start 2P', sans-serif;
+  padding: 10px;
+}
+
+button:hover {
+  background-color: rgb(211, 211, 211);
+}
+
+.board {
+  border: 3px dashed navy;
+  user-select: none;
+  margin: auto;
+  width: fit-content;
+  grid-area: game;
+}
+
+.row {
+  display: flex;
+}
+
+.upcoming {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 10px;
+}
+
+.cell {
+  width: 30px;
+  aspect-ratio: 1;
+  border: 1px dashed navy;
+}
+
+.cell.Empty {
+  background-color: black;
+}
+
+.cell.hidden {
+  visibility: hidden;
+}
+
+.cell.L {
+  background-color: purple;
+}
+
+.cell.I {
+  background-color: red;
+}
+
+.cell.T {
+  background-color: yellow;
+}
+
+.cell.S {
+  background-color: green;
+}
+
+.cell.Z {
+  background-color: cyan;
+}
+
+.cell.O {
+  background-color: blue;
+}
+
+.cell.J {
+  background-color: white;
+}
